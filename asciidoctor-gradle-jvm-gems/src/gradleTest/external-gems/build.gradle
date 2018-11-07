@@ -2,6 +2,7 @@
 plugins {
     id 'org.asciidoctor.jvm.convert'
     id 'org.asciidoctor.jvm.gems'
+    id 'org.ysb33r.os' version '0.9'
 }
 // end::use-gems[]
 
@@ -18,6 +19,7 @@ dependencies {
 
 asciidoctorj {
     requires 'asciidoctor-bibtex'
+    jrubyVersion '9.2.1.0'
 }
 
 asciidoctor {
@@ -32,6 +34,13 @@ asciidoctor {
 // end::use-gems[]
 
 task runGradleTest {
-    dependsOn asciidoctor
+
+    if(OS.windows) {
+        doLast {
+            println '***** The external GEMs test is currently disabled on Windows *****'
+        }
+    } else {
+        dependsOn asciidoctor
+    }git
 }
 

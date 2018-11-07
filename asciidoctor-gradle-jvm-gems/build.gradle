@@ -8,6 +8,8 @@ test {
     systemProperties OFFLINE_REPO: offlineRepoRoot.absolutePath
 }
 
+gradleTest.gradleArguments '-i'
+
 configurePlugin 'org.asciidoctor.jvm.gems',
     'Simplifies support for using external GEMs with AsciidoctorJ',
     'Provides appropriate tasks and configurations for adding GEMs to AsciidoctorJ conversions',
