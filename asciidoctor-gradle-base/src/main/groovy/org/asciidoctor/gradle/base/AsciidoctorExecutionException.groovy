@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.asciidoctor.gradle.jvm
+package org.asciidoctor.gradle.base
 
 import groovy.transform.CompileStatic
 import org.gradle.api.GradleException
 
 /**
- * @since 2.0.0
+ * @since 3.0 (Moved from org.asciidoctor.gradle.jvm)
  * @author Schalk W. Cronjé
  */
 @CompileStatic

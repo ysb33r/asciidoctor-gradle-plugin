@@ -39,7 +39,6 @@ class AsciidoctorJavaExec extends ExecutorBase {
     }
 
     void run() {
-
         Thread.currentThread().contextClassLoader = this.class.classLoader
         Asciidoctor asciidoctor = asciidoctorInstance
         addRequires(asciidoctor)
@@ -51,7 +50,6 @@ class AsciidoctorJavaExec extends ExecutorBase {
         }
 
         runConfigurations.each { runConfiguration ->
-
             LogHandler lh = getLogHandler(runConfiguration.executorLogLevel)
             asciidoctor.registerLogHandler(lh)
             resetMessagePatternsTo(runConfiguration.fatalMessagePatterns)
