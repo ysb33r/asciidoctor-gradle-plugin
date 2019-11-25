@@ -26,7 +26,6 @@ import org.gradle.api.Project
  */
 @CompileStatic
 class KindleGenBasePlugin implements Plugin<Project> {
-
     void apply(Project project) {
         project.extensions.create(KindleGenExtension.NAME, KindleGenExtension, project)
     }
